@@ -15,3 +15,18 @@
 // When you have a program that generates this pattern, define a binding size
 // = 8 and change the program so that it works for any size, outputting a grid
 // of the given width and height.
+
+
+
+boardDimensions = Number(prompt("Please enter the dimensions of the squared grid representing the chess board: "));
+let chessTable = "";
+for (let i = 0; i < boardDimensions;i++) {
+  for (let j = 0; j < boardDimensions; j++)
+  {
+    if ((i+j)%2) chessTable+="#";
+    else chessTable+=" ";
+  }
+  chessTable+="\n";
+}
+
+console.log(chessTable);
